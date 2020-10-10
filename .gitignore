@@ -1,0 +1,10 @@
+node_modules
+coverage
+logging
+dist
+.vscode
+.idea
+/logfile.log
+config/*.local
+.scannerwork
+.env

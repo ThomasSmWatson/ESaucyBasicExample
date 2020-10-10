@@ -1,0 +1,56 @@
+{
+  "name": "esaucy-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/src/app.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node dist/src/app",
+    "watch": "nodemon --watch 'src/**/*.ts' --ignore ['src/**/*.spec.ts','src/**/*.steps.ts'] --exec npm run start",
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "format:check": "prettier --list-different \"src/**/*.{ts,js,json}\" \"test/**/*.{ts,js}\"",
+    "format:staged": "pretty-quick --staged",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix"
+  },
+  "publishConfig": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "run-p -n --aggregate-output format:staged lint build test",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "esaucy": "^1.0.4"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.2.3",
+    "@types/node": "^14.0.9",
+    "@typescript-eslint/eslint-plugin": "^3.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-prettier": "^3.1.3",
+    "@typescript-eslint/parser": "^3.1.0",
+    "commitlint": "^9.1.2",
+    "@commitlint/config-conventional": "^8.3.4",
+    "husky": "^4.2.5",
+    "eslint": "^7.2.0",
+    "jest": "^26.0.1",
+    "nodemon": "^2.0.4",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1",
+    "ts-jest": "^26.1.0",
+    "typescript": "^3.9.3"
+  }
+}

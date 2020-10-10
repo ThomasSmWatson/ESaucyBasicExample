@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "lib": ["es6", "DOM"],
+    "types": [ "node", "jest"],
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "sourceMap": true,
+    "target": "ES6",
+    "declaration": true,
+    "rootDir": "./",
+    "outDir": "dist",
+    "resolveJsonModule": true,
+    "strictNullChecks": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "pretty": true
+  },
+  "exclude": ["node_modules", "test", "dist", "automation_test"]
+}

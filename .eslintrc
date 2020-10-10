@@ -1,0 +1,20 @@
+{
+    "extends": ["prettier", "plugin:@typescript-eslint/recommended"],
+    "plugins": ["@typescript-eslint", "prettier"],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "env": {
+        "es6": true,
+        "jest": true,
+        "browser": false,
+        "node": true
+    },
+    "rules": {
+        "no-console": "off",
+        "@typescript-eslint/interface-name-prefix": "off",
+        "@typescript-eslint/no-inferrable-types": "off"
+    }
+}
